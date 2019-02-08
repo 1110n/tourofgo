@@ -19,13 +19,27 @@ func CreateIntArray() {
 	fmt.Println(cubes)
 }
 
-func CreateStringArray() {}
+func CreateStringArray() {
+	countries := [4]string{"India", "Austrilia", "Japan", "US"}
+	fmt.Println(countries)
+}
 
 func ReverseArrayElems() {}
 
-func AccessSpecificElem() {}
+func AccessSpecificElem() {
+	countries := [7]string{"MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"}
+	fmt.Println(countries)
+	fmt.Println("Printing the 3rd Element of the above Array")
+	fmt.Println(countries[2])
+}
 
-func EditArrayElem() {}
+func EditArrayElem() {
+	tasks := [3]string{"LOGIN", "SIGNUP", "DASHBOARD"}
+	fmt.Println(tasks)
+	fmt.Println("Changing the order of first 2 tasks")
+	tasks[0], tasks[1] = tasks[1], tasks[0]
+	fmt.Println(tasks)
+}
 
 func StartTutorial() {
 	fmt.Println("\t\t1. To create a new Int Array")
@@ -33,7 +47,7 @@ func StartTutorial() {
 	fmt.Println("\t\t3. To reverse the elements of an Array")
 	fmt.Println("\t\t4. To access specific element of an Array")
 	fmt.Println("\t\t5. To change the value of an array")
-	fmt.Println("\t\t6. To Exit the Tutorial")
+	fmt.Println("\t\t6. To Exit the Tour")
 	command := cio.GetInt()
 	if command == 1 {
 		CreateIntArray()
@@ -51,7 +65,7 @@ func StartTutorial() {
 		EditArrayElem()
 	}
 	if command == 6 {
-		fmt.Println("Closing the Tutorial!")
+		fmt.Println("Closing the Tour!")
 		os.Exit(0)
 	}
 	StartTutorial()
