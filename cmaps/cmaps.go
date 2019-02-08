@@ -15,7 +15,10 @@ type User struct {
 
 func CreateMap() {
 	var m map[int]User
-
+	m = make(map[int]User)
+	m[1] = User{"One", 1, "Java Programming"}
+	m[2] = User{"Two", 2, "C Programming"}
+	fmt.Println(m)
 }
 
 func StartTutorial() {
